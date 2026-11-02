@@ -1,0 +1,18 @@
+{
+  "name": "g1yrex-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Premium dark-blue personal portfolio with a secure admin dashboard and contact center.",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "check": "node --check api/content.js && node --check api/contact.js && node --check api/admin/login.js && node --check api/admin/me.js && node --check api/admin/logout.js && node --check api/admin/content.js && node --check api/admin/contacts.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  },
+  "devDependencies": {
+    "vercel": "^41.4.1"
+  }
+}

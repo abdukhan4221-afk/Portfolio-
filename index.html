@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="Hafiz Abdullah Abbas — Developer & Content Creator.">
+  <title>Hafiz Abdullah Abbas — Developer & Creator</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Hafiz Abdullah Abbas home"><span class="brand-mark">HA</span><span>HAFIZ<span class="brand-dot">.</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" id="mainNav"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#studies">Studies</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    <a class="header-cta" href="#contact">Let's talk <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy" data-reveal>
+        <div class="eyebrow"><span class="status-dot"></span> <span id="availabilityText">Open to interesting projects</span></div>
+        <p class="hero-kicker">HELLO, I'M</p>
+        <h1 id="heroName">Hafiz Abdullah<br><span class="gradient-text">Abbas.</span></h1>
+        <h2 id="heroHeadline">Developer <span class="blue-amp">&</span> Content Creator</h2>
+        <p class="hero-description" id="heroDescription">I enjoy building for the web, creating digital experiences, and sharing what I make.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span>↗</span></a><a class="button button-ghost" href="#contact">Get in touch</a></div>
+        <div class="hero-socials" id="heroSocials"></div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div><div class="orbit-point"></div>
+        <div class="avatar-shell"><div class="avatar-core"><span id="avatarLetters">HA</span></div><div class="avatar-sheen"></div></div>
+        <div class="floating-chip chip-top"><span class="chip-icon">✦</span><span>CREATIVE MIND</span></div>
+        <div class="floating-chip chip-bottom"><span class="chip-pulse"></span><span>BUILDING THE WEB</span></div>
+        <div class="art-caption">DESIGN <span>·</span> BUILD <span>·</span> CREATE</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section section-wrap" id="about">
+      <div class="section-heading" data-reveal><p class="eyebrow">01 / ABOUT</p><h2>A little about <span class="gradient-text">me.</span></h2><p class="section-subtitle">Curiosity turns ideas into things people can experience.</p></div>
+      <div class="about-grid">
+        <article class="glass-card about-card" data-reveal><div class="card-icon">✳</div><h3>Who I am</h3><p id="aboutText">I enjoy building for the web, creating digital experiences, and sharing what I make. This portfolio is where I bring my development work and creative projects together.</p><div class="card-foot"><span>BASED IN</span><strong id="locationText">Pakistan</strong></div></article>
+        <article class="glass-card skills-card" data-reveal><div class="card-topline"><span class="eyebrow">MY TOOLKIT</span><span class="card-index">01—02</span></div><h3>Skills & interests</h3><div class="skill-list" id="skillList"></div><div class="skill-note">Always learning. Always building.</div></article>
+      </div>
+    </section>
+
+    <section class="section section-wrap" id="studies">
+      <div class="section-heading" data-reveal><p class="eyebrow">02 / STUDIES</p><h2>Learning is part of the <span class="gradient-text">process.</span></h2><p class="section-subtitle">The foundations behind what I build.</p></div>
+      <div class="timeline" id="educationList" data-reveal></div>
+    </section>
+
+    <section class="section section-wrap" id="projects">
+      <div class="section-heading" data-reveal><p class="eyebrow">03 / SELECTED WORK</p><h2>Things I've <span class="gradient-text">built.</span></h2><p class="section-subtitle">A selection of projects, experiments and ideas.</p></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section class="section contact-section section-wrap" id="contact">
+      <div class="contact-intro" data-reveal><p class="eyebrow">04 / CONTACT</p><h2>Have an idea?<br><span class="gradient-text">Let's make it real.</span></h2><p>Have a project in mind, a question, or just want to connect? Send a message.</p><a class="email-link" id="contactEmailLink" href="mailto:abdukhan42121@gmail.com">abdukhan42121@gmail.com <span>↗</span></a><div class="contact-socials" id="contactSocials"></div></div>
+      <form class="glass-card contact-form" id="contactForm" data-reveal>
+        <div class="form-heading"><span class="eyebrow">SEND A MESSAGE</span><span class="form-spark">✦</span></div>
+        <label>Your name<input name="name" autocomplete="name" placeholder="Name" maxlength="100" required></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="200" required></label>
+        <label>Subject <span class="optional">(optional)</span><input name="subject" placeholder="What's this about?" maxlength="160"></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Tell me a little about it..." maxlength="4000" required></textarea></label>
+        <label class="hp-field" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-primary form-submit" type="submit">Send message <span>↗</span></button><p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">HA</span><span>HAFIZ<span class="brand-dot">.</span></span></a><p>Designed with curiosity. Built with intent.</p><a href="#home" class="back-top">BACK TO TOP ↑</a><span class="copyright">© <span id="year"></span> Hafiz Abdullah Abbas</span></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
